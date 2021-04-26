@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LocationModel7.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="NewBatch">
+          <Key>
+            <PropertyRef Name="BatchNumber" />
+          </Key>
+          <Property Name="BatchNumber" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="AcademicYrSemester" Type="varchar" MaxLength="50" />
+          <Property Name="ProgrammeID" Type="varchar" MaxLength="50" />
+          <Property Name="groupNumber" Type="int" />
+          <Property Name="subGroupNumber" Type="int" />
+          <Property Name="GroupID" Type="varchar" MaxLength="50" />
+          <Property Name="subGroupID" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="LocationModel7StoreContainer">
+          <EntitySet Name="NewBatch" EntityType="Self.NewBatch" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LocationModel7" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="NewBatch">
+          <Key>
+            <PropertyRef Name="BatchNumber" />
+          </Key>
+          <Property Name="BatchNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AcademicYrSemester" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ProgrammeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="groupNumber" Type="Int32" />
+          <Property Name="subGroupNumber" Type="Int32" />
+          <Property Name="GroupID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="subGroupID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="LocationEntities7" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NewBatches" EntityType="Self.NewBatch" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LocationModel7StoreContainer" CdmEntityContainer="LocationEntities7">
+          <EntitySetMapping Name="NewBatches">
+            <EntityTypeMapping TypeName="LocationModel7.NewBatch">
+              <MappingFragment StoreEntitySet="NewBatch">
+                <ScalarProperty Name="BatchNumber" ColumnName="BatchNumber" />
+                <ScalarProperty Name="AcademicYrSemester" ColumnName="AcademicYrSemester" />
+                <ScalarProperty Name="ProgrammeID" ColumnName="ProgrammeID" />
+                <ScalarProperty Name="groupNumber" ColumnName="groupNumber" />
+                <ScalarProperty Name="subGroupNumber" ColumnName="subGroupNumber" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="subGroupID" ColumnName="subGroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
