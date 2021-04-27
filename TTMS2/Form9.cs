@@ -46,7 +46,7 @@ namespace TTMS2
                 }
             }
         }
-
+        //----...
         private async void tbAdd_Click(object sender, EventArgs e)
         {
             using (frmLecturerInfo frm = new frmLecturerInfo(new Lecturer()))
