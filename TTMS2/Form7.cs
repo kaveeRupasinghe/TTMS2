@@ -13,6 +13,7 @@ using System.Windows.Forms;
 
 namespace TTMS2
 {
+    //c
     public partial class Form7 : Form
     {
         LocationEntities7 db;
