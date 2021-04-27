@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LocationModel9.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Lecturer">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="LecturerName" Type="varchar" MaxLength="100" />
+          <Property Name="EmployeeID" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Faculty" Type="varchar" MaxLength="100" />
+          <Property Name="Department" Type="varchar" MaxLength="100" />
+          <Property Name="Center" Type="varchar" MaxLength="50" />
+          <Property Name="Building" Type="varchar" MaxLength="20" />
+          <Property Name="ELevel" Type="varchar" MaxLength="50" />
+          <Property Name="Rank" Type="int" />
+        </EntityType>
+        <EntityContainer Name="LocationModel9StoreContainer">
+          <EntitySet Name="Lecturer" EntityType="Self.Lecturer" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LocationModel9" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Lecturer">
+          <Key>
+            <PropertyRef Name="EmployeeID" />
+          </Key>
+          <Property Name="LecturerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="EmployeeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Faculty" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Center" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Building" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ELevel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Rank" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="LocationEntities9" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Lecturers" EntityType="Self.Lecturer" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LocationModel9StoreContainer" CdmEntityContainer="LocationEntities9">
+          <EntitySetMapping Name="Lecturers">
+            <EntityTypeMapping TypeName="LocationModel9.Lecturer">
+              <MappingFragment StoreEntitySet="Lecturer">
+                <ScalarProperty Name="LecturerName" ColumnName="LecturerName" />
+                <ScalarProperty Name="EmployeeID" ColumnName="EmployeeID" />
+                <ScalarProperty Name="Faculty" ColumnName="Faculty" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Center" ColumnName="Center" />
+                <ScalarProperty Name="Building" ColumnName="Building" />
+                <ScalarProperty Name="ELevel" ColumnName="ELevel" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

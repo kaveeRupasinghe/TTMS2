@@ -145,6 +145,8 @@ namespace TTMS2
 
         private void btnLecturer_Click(object sender, EventArgs e)
         {
+            openChildForm(new Form9());
+
             hideSubMenu();
 
         }

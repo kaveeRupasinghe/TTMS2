@@ -108,11 +108,23 @@
     <Compile Include="Form8.Designer.cs">
       <DependentUpon>Form8.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form9.Designer.cs">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuildingInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBuildingInfo.Designer.cs">
       <DependentUpon>frmBuildingInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLecturerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLecturerInfo.Designer.cs">
+      <DependentUpon>frmLecturerInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNewBatchInfo.cs">
       <SubType>Form</SubType>
@@ -143,6 +155,9 @@
     </Compile>
     <Compile Include="frmTagInfo.Designer.cs">
       <DependentUpon>frmTagInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturer.cs">
+      <DependentUpon>Model9.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -234,6 +249,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model7.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model9.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model9.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model9.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model9.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model9.edmx</DependentUpon>
+    </Compile>
     <Compile Include="NewBatch.cs">
       <DependentUpon>Model7.tt</DependentUpon>
     </Compile>
@@ -275,8 +305,14 @@
     <EmbeddedResource Include="Form8.resx">
       <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form9.resx">
+      <DependentUpon>Form9.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuildingInfo.resx">
       <DependentUpon>frmBuildingInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLecturerInfo.resx">
+      <DependentUpon>frmLecturerInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewBatchInfo.resx">
       <DependentUpon>frmNewBatchInfo.cs</DependentUpon>
@@ -345,8 +381,16 @@
     <None Include="Model7.edmx.diagram">
       <DependentUpon>Model7.edmx</DependentUpon>
     </None>
+    <EntityDeploy Include="Model9.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model9.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model9.edmx.diagram">
+      <DependentUpon>Model9.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Building.datasource" />
+    <None Include="Properties\DataSources\Lecturer.datasource" />
     <None Include="Properties\DataSources\NewBatch.datasource" />
     <None Include="Properties\DataSources\Programme.datasource" />
     <None Include="Properties\DataSources\Roo.datasource" />
@@ -425,6 +469,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model7.edmx</DependentUpon>
       <LastGenOutput>Model7.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model9.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model9.edmx</DependentUpon>
+      <LastGenOutput>Model9.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model9.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model9.edmx</DependentUpon>
+      <LastGenOutput>Model9.cs</LastGenOutput>
     </Content>
     <None Include="Resources\editbutton.png" />
     <None Include="Resources\WhatsApp Image 2021-04-09 at 8.16.41 AM.jpeg" />
