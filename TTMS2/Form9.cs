@@ -26,7 +26,7 @@ namespace TTMS2
             db = new LocationEntities9();
             lecturerBindingSource.DataSource = db.Lecturers.ToList();
         }
-
+        //............
         private void tbRefresh_Click(object sender, EventArgs e)
         {
             lecturerBindingSource.DataSource = db.Lecturers.ToList();
@@ -46,7 +46,7 @@ namespace TTMS2
                 }
             }
         }
-
+        //----...
         private async void tbAdd_Click(object sender, EventArgs e)
         {
             using (frmLecturerInfo frm = new frmLecturerInfo(new Lecturer()))
