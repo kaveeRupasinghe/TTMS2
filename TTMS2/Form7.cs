@@ -12,7 +12,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TTMS2
+
+{
+   
+
 {//bh
+
     public partial class Form7 : Form
     {
         LocationEntities7 db;
