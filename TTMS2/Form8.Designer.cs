@@ -46,10 +46,10 @@ namespace TTMS2
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.chartBuilding = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.buildingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.buildingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartLecturer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBuilding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buildingBindingSource)).BeginInit();
@@ -169,6 +169,11 @@ namespace TTMS2
             title2.Name = "Location";
             title2.Text = "Location";
             this.chartBuilding.Titles.Add(title2);
+            this.chartBuilding.Click += new System.EventHandler(this.chartBuilding_Click);
+            // 
+            // buildingBindingSource
+            // 
+            this.buildingBindingSource.DataSource = typeof(TTMS2.Building);
             // 
             // label4
             // 
@@ -201,10 +206,6 @@ namespace TTMS2
             this.monthCalendar1.Location = new System.Drawing.Point(616, 18);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 11;
-            // 
-            // buildingBindingSource
-            // 
-            this.buildingBindingSource.DataSource = typeof(TTMS2.Building);
             // 
             // Form8
             // 

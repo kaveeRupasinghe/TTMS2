@@ -160,6 +160,7 @@ namespace TTMS2
 
         private void btnSubject_Click(object sender, EventArgs e)
         {
+            openChildForm(new Form10());
             hideSubMenu();
 
         }

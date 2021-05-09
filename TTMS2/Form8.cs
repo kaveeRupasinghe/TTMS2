@@ -28,6 +28,7 @@ namespace TTMS2
             using (LocationEntities db = new LocationEntities())
             {
                 chartBuilding.DataSource = db.Buildings.ToList();
+
                 chartBuilding.Series["Building"].XValueMember = "BuildingNames";
                 chartBuilding.Series["Building"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
                 chartBuilding.Series["Building"].YValueMembers = "NumberOfRooms";
@@ -39,6 +40,11 @@ namespace TTMS2
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chartBuilding_Click(object sender, EventArgs e)
         {
 
         }
