@@ -284,6 +284,7 @@ namespace TTMS2
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmLecturerInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Add/Edit Lecturers";
             this.Load += new System.EventHandler(this.frmLecturerInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericRank)).EndInit();

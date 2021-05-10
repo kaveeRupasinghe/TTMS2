@@ -13,23 +13,24 @@ using System.Windows.Forms;
 
 namespace TTMS2
 {
-    public partial class Form9 : Form
+    public partial class Form11 : Form
     {
-        LocationEntities9 db;
-        public Form9()
+        LocationEntities11 db;
+        public Form11()
         {
             InitializeComponent();
         }
 
-        private void Form9_Load(object sender, EventArgs e)
+        private void Form11_Load(object sender, EventArgs e)
         {
-            db = new LocationEntities9();
-            lecturerBindingSource.DataSource = db.Lecturers.ToList();
+            db = new LocationEntities11();
+            subjectBindingSource.DataSource = db.Subjects.ToList();
+
         }
-        
+
         private void tbRefresh_Click(object sender, EventArgs e)
         {
-            lecturerBindingSource.DataSource = db.Lecturers.ToList();
+            subjectBindingSource.DataSource = db.Subjects.ToList();
             foreach (DbEntityEntry entry in db.ChangeTracker.Entries())
             {
                 switch (entry.State)
@@ -46,17 +47,17 @@ namespace TTMS2
                 }
             }
         }
-       
+
         private async void tbAdd_Click(object sender, EventArgs e)
         {
-            using (frmLecturerInfo frm = new frmLecturerInfo(new Lecturer()))
+            using (frmSubjectsInfo frm = new frmSubjectsInfo(new Subject()))
             {
                 if (frm.ShowDialog() == DialogResult.OK)
                 {
                     try
                     {
-                        lecturerBindingSource.Add(frm.LecturerInfo);
-                        db.Lecturers.Add(frm.LecturerInfo);
+                        subjectBindingSource.Add(frm.subjectInfo);
+                        db.Subjects.Add(frm.subjectInfo);
                         await db.SaveChangesAsync();
                     }
                     catch (Exception ex)
@@ -69,17 +70,17 @@ namespace TTMS2
 
         private async void tbEdit_Click(object sender, EventArgs e)
         {
-            Lecturer obj = lecturerBindingSource.Current as Lecturer;
+            Subject obj = subjectBindingSource.Current as Subject;
             if (obj != null)
             {
 
-                using (frmLecturerInfo frm = new frmLecturerInfo(obj))
+                using (frmSubjectsInfo frm = new frmSubjectsInfo(obj))
                 {
                     if (frm.ShowDialog() == DialogResult.OK)
                     {
                         try
                         {
-                            lecturerBindingSource.EndEdit();
+                            subjectBindingSource.EndEdit();
                             await db.SaveChangesAsync();
                         }
                         catch (Exception ex)
@@ -100,13 +101,13 @@ namespace TTMS2
                 //    db.Building.Remove(dataGridView1.SelectedRows[i].DataBoundItem as Building);
                 //    buildingBindingSource.RemoveAt(dataGridView1.SelectedRows[i].Index);
                 //}
-                int count = dataGridView9.RowCount;
+                int count = dataGridView11.RowCount;
                 for (int i = count - 1; i >= 0; i--)
                 {
-                    if (dataGridView9.Rows[i].Selected)
+                    if (dataGridView11.Rows[i].Selected)
                     {
-                        db.Lecturers.Remove(dataGridView9.Rows[i].DataBoundItem as Lecturer);
-                        lecturerBindingSource.RemoveAt(dataGridView9.Rows[i].Index);
+                        db.Subjects.Remove(dataGridView11.Rows[i].DataBoundItem as Subject);
+                        subjectBindingSource.RemoveAt(dataGridView11.Rows[i].Index);
 
                     }
                 }
@@ -120,7 +121,7 @@ namespace TTMS2
 
                 try
                 {
-                    lecturerBindingSource.EndEdit();
+                    subjectBindingSource.EndEdit();
                     await db.SaveChangesAsync();
                 }
                 catch (Exception ex)
@@ -138,15 +139,15 @@ namespace TTMS2
                 {
                     if (cn.State == ConnectionState.Closed)
                         cn.Open();
-                    using (DataTable dt = new DataTable("Lecturer"))
+                    using (DataTable dt = new DataTable("Subjects"))
                     {
-                        using (SqlCommand cmd = new SqlCommand("select *from Lecturer where EmployeeID=@EmployeeID or LecturerName like @LecturerName", cn))
+                        using (SqlCommand cmd = new SqlCommand("select *from Subjects where SubCode=@SubCode or SubName like @SubName", cn))
                         {
-                            cmd.Parameters.AddWithValue("EmployeeID", txtSearch.Text);
-                            cmd.Parameters.AddWithValue("LecturerName", String.Format("%{0}%", txtSearch.Text));
+                            cmd.Parameters.AddWithValue("SubCode", txtSearch.Text);
+                            cmd.Parameters.AddWithValue("SubName", String.Format("%{0}%", txtSearch.Text));
                             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                             adapter.Fill(dt);
-                            dataGridView9.DataSource = dt;
+                            dataGridView11.DataSource = dt;
                             //lblTotal.Text = $"Total Records: {dataGridView6.RowCount}";
                         }
                     }

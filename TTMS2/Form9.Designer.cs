@@ -34,17 +34,16 @@ namespace TTMS2
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
-            this.tbRefresh = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tbAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tbEdit = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.tbDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.tbSave = new System.Windows.Forms.ToolStripButton();
             this.btnClose = new System.Windows.Forms.Button();
-            this.lecturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tbAdd = new System.Windows.Forms.ToolStripButton();
+            this.tbEdit = new System.Windows.Forms.ToolStripButton();
+            this.tbDelete = new System.Windows.Forms.ToolStripButton();
+            this.tbSave = new System.Windows.Forms.ToolStripButton();
             this.lecturerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.facultyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,6 +52,7 @@ namespace TTMS2
             this.buildingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rankDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lecturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lecturerBindingSource)).BeginInit();
@@ -120,85 +120,35 @@ namespace TTMS2
             this.tbSave});
             this.toolStrip2.Location = new System.Drawing.Point(0, 0);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1143, 31);
+            this.toolStrip2.Size = new System.Drawing.Size(1143, 27);
             this.toolStrip2.TabIndex = 14;
             this.toolStrip2.Text = "toolStrip2";
-            // 
-            // tbRefresh
-            // 
-            this.tbRefresh.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbRefresh.Image = global::TTMS2.Properties.Resources.WhatsApp_Image_2021_04_09_at_8_16_40_AM;
-            this.tbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbRefresh.Name = "tbRefresh";
-            this.tbRefresh.Size = new System.Drawing.Size(82, 28);
-            this.tbRefresh.Text = "Refresh";
-            this.tbRefresh.Click += new System.EventHandler(this.tbRefresh_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
-            // 
-            // tbAdd
-            // 
-            this.tbAdd.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbAdd.Image = global::TTMS2.Properties.Resources.WhatsApp_Image_2021_04_09_at_8_16_39_AM;
-            this.tbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbAdd.Name = "tbAdd";
-            this.tbAdd.Size = new System.Drawing.Size(61, 28);
-            this.tbAdd.Text = "Add";
-            this.tbAdd.Click += new System.EventHandler(this.tbAdd_Click);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // tbEdit
-            // 
-            this.tbEdit.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbEdit.Image = global::TTMS2.Properties.Resources.editbutton;
-            this.tbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbEdit.Name = "tbEdit";
-            this.tbEdit.Size = new System.Drawing.Size(59, 28);
-            this.tbEdit.Text = "Edit";
-            this.tbEdit.Click += new System.EventHandler(this.tbEdit_Click);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
-            // 
-            // tbDelete
-            // 
-            this.tbDelete.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbDelete.Image = global::TTMS2.Properties.Resources.WhatsApp_Image_2021_04_09_at_8_16_39_AM__1_;
-            this.tbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbDelete.Name = "tbDelete";
-            this.tbDelete.Size = new System.Drawing.Size(77, 28);
-            this.tbDelete.Text = "Delete";
-            this.tbDelete.Click += new System.EventHandler(this.tbDelete_Click);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
-            // 
-            // tbSave
-            // 
-            this.tbSave.ForeColor = System.Drawing.Color.SteelBlue;
-            this.tbSave.Image = global::TTMS2.Properties.Resources.WhatsApp_Image_2021_04_09_at_8_16_40_AM__1_;
-            this.tbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tbSave.Name = "tbSave";
-            this.tbSave.Size = new System.Drawing.Size(64, 28);
-            this.tbSave.Text = "Save";
-            this.tbSave.Click += new System.EventHandler(this.tbSave_Click);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClose.Location = new System.Drawing.Point(1006, 800);
+            this.btnClose.Location = new System.Drawing.Point(997, 799);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(85, 38);
             this.btnClose.TabIndex = 15;
@@ -206,9 +156,55 @@ namespace TTMS2
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // lecturerBindingSource
+            // tbRefresh
             // 
-            this.lecturerBindingSource.DataSource = typeof(TTMS2.Lecturer);
+            this.tbRefresh.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbRefresh.Image = global::TTMS2.Properties.Resources.WhatsApp_Image_2021_04_09_at_8_16_40_AM;
+            this.tbRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbRefresh.Name = "tbRefresh";
+            this.tbRefresh.Size = new System.Drawing.Size(82, 24);
+            this.tbRefresh.Text = "Refresh";
+            this.tbRefresh.Click += new System.EventHandler(this.tbRefresh_Click);
+            // 
+            // tbAdd
+            // 
+            this.tbAdd.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbAdd.Image = global::TTMS2.Properties.Resources.WhatsApp_Image_2021_04_09_at_8_16_39_AM;
+            this.tbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbAdd.Name = "tbAdd";
+            this.tbAdd.Size = new System.Drawing.Size(61, 24);
+            this.tbAdd.Text = "Add";
+            this.tbAdd.Click += new System.EventHandler(this.tbAdd_Click);
+            // 
+            // tbEdit
+            // 
+            this.tbEdit.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbEdit.Image = global::TTMS2.Properties.Resources.editbutton;
+            this.tbEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbEdit.Name = "tbEdit";
+            this.tbEdit.Size = new System.Drawing.Size(59, 24);
+            this.tbEdit.Text = "Edit";
+            this.tbEdit.Click += new System.EventHandler(this.tbEdit_Click);
+            // 
+            // tbDelete
+            // 
+            this.tbDelete.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbDelete.Image = global::TTMS2.Properties.Resources.WhatsApp_Image_2021_04_09_at_8_16_39_AM__1_;
+            this.tbDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbDelete.Name = "tbDelete";
+            this.tbDelete.Size = new System.Drawing.Size(77, 24);
+            this.tbDelete.Text = "Delete";
+            this.tbDelete.Click += new System.EventHandler(this.tbDelete_Click);
+            // 
+            // tbSave
+            // 
+            this.tbSave.ForeColor = System.Drawing.Color.SteelBlue;
+            this.tbSave.Image = global::TTMS2.Properties.Resources.WhatsApp_Image_2021_04_09_at_8_16_40_AM__1_;
+            this.tbSave.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tbSave.Name = "tbSave";
+            this.tbSave.Size = new System.Drawing.Size(64, 24);
+            this.tbSave.Text = "Save";
+            this.tbSave.Click += new System.EventHandler(this.tbSave_Click);
             // 
             // lecturerNameDataGridViewTextBoxColumn
             // 
@@ -278,6 +274,10 @@ namespace TTMS2
             this.rankDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.rankDataGridViewTextBoxColumn.Name = "rankDataGridViewTextBoxColumn";
             this.rankDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lecturerBindingSource
+            // 
+            this.lecturerBindingSource.DataSource = typeof(TTMS2.Lecturer);
             // 
             // Form9
             // 

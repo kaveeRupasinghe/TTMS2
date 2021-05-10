@@ -19,11 +19,11 @@ namespace TTMS2
 
         private void Form8_Load(object sender, EventArgs e)
         {
-            chartLecturer.Series["Categories"].Points.AddXY("Professor", 5);
+            /*chartLecturer.Series["Categories"].Points.AddXY("Professor", 5);
             chartLecturer.Series["Categories"].Points.AddXY("Assistant Professor", 9);
             chartLecturer.Series["Categories"].Points.AddXY("Senior Lecturer(HG)", 10);
             chartLecturer.Series["Categories"].Points.AddXY("Senior Lecturer", 15);
-            chartLecturer.Series["Categories"].Points.AddXY("Assistant Lecturer", 20);
+            chartLecturer.Series["Categories"].Points.AddXY("Assistant Lecturer", 20);*/
 
             using (LocationEntities db = new LocationEntities())
             {
@@ -35,7 +35,16 @@ namespace TTMS2
                 chartBuilding.Series["Building"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
 
             }
+        /*    using (LocationEntities9 db = new LocationEntities9())
+            {
+                chartLecturer.DataSource = db.Lecturers.ToList();
 
+                chartLecturer.Series["Lecturer"].XValueMember = "ELevel";
+                chartLecturer.Series["Lecturer"].XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+                chartLecturer.Series["Lecturer"].YValueMembers = "Rank";
+                chartLecturer.Series["Lecturer"].YValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.String;
+
+            } */
 
         }
 
@@ -45,6 +54,11 @@ namespace TTMS2
         }
 
         private void chartBuilding_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
         }

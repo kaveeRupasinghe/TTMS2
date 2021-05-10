@@ -30,14 +30,14 @@ namespace TTMS2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.chartLecturer = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,38 +46,42 @@ namespace TTMS2
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.chartBuilding = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.buildingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.buildingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lecturerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.chartLecturer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBuilding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.buildingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // chartLecturer
             // 
             this.chartLecturer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea1.Name = "ChartArea1";
-            this.chartLecturer.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartLecturer.Legends.Add(legend1);
-            this.chartLecturer.Location = new System.Drawing.Point(3, 410);
+            chartArea3.Name = "ChartArea1";
+            this.chartLecturer.ChartAreas.Add(chartArea3);
+            this.chartLecturer.DataSource = this.lecturerBindingSource;
+            legend3.Name = "Legend1";
+            this.chartLecturer.Legends.Add(legend3);
+            this.chartLecturer.Location = new System.Drawing.Point(37, 335);
             this.chartLecturer.Name = "chartLecturer";
             this.chartLecturer.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.LabelForeColor = System.Drawing.Color.Navy;
-            series1.Legend = "Legend1";
-            series1.Name = "Categories";
-            this.chartLecturer.Series.Add(series1);
-            this.chartLecturer.Size = new System.Drawing.Size(458, 480);
+            series3.ChartArea = "ChartArea1";
+            series3.Font = new System.Drawing.Font("Nirmala UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series3.LabelForeColor = System.Drawing.Color.Navy;
+            series3.Legend = "Legend1";
+            series3.Name = "Lecturer";
+            series3.XValueMember = "ELevel";
+            series3.YValueMembers = "Rank";
+            this.chartLecturer.Series.Add(series3);
+            this.chartLecturer.Size = new System.Drawing.Size(742, 480);
             this.chartLecturer.TabIndex = 0;
             this.chartLecturer.Text = "chart1";
-            title1.Name = "Title1";
-            title1.Text = "Lecturers";
-            this.chartLecturer.Titles.Add(title1);
+            title3.Name = "Title1";
+            title3.Text = "Lecturers";
+            this.chartLecturer.Titles.Add(title3);
             // 
             // textBox1
             // 
@@ -148,32 +152,26 @@ namespace TTMS2
             // 
             // chartBuilding
             // 
-            this.chartBuilding.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            chartArea2.Name = "ChartArea1";
-            this.chartBuilding.ChartAreas.Add(chartArea2);
+            this.chartBuilding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            chartArea4.Name = "ChartArea1";
+            this.chartBuilding.ChartAreas.Add(chartArea4);
             this.chartBuilding.DataSource = this.buildingBindingSource;
-            legend2.Name = "Legend1";
-            this.chartBuilding.Legends.Add(legend2);
-            this.chartBuilding.Location = new System.Drawing.Point(519, 333);
+            legend4.Name = "Legend1";
+            this.chartBuilding.Legends.Add(legend4);
+            this.chartBuilding.Location = new System.Drawing.Point(336, 335);
             this.chartBuilding.Name = "chartBuilding";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Building";
-            series2.XValueMember = "BuildingNames";
-            series2.YValueMembers = "Rooms";
-            this.chartBuilding.Series.Add(series2);
-            this.chartBuilding.Size = new System.Drawing.Size(612, 515);
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Building";
+            series4.XValueMember = "BuildingNames";
+            series4.YValueMembers = "Rooms";
+            this.chartBuilding.Series.Add(series4);
+            this.chartBuilding.Size = new System.Drawing.Size(738, 480);
             this.chartBuilding.TabIndex = 8;
-            title2.Name = "Location";
-            title2.Text = "Location";
-            this.chartBuilding.Titles.Add(title2);
+            title4.Name = "Location";
+            title4.Text = "Location";
+            this.chartBuilding.Titles.Add(title4);
             this.chartBuilding.Click += new System.EventHandler(this.chartBuilding_Click);
-            // 
-            // buildingBindingSource
-            // 
-            this.buildingBindingSource.DataSource = typeof(TTMS2.Building);
             // 
             // label4
             // 
@@ -199,13 +197,19 @@ namespace TTMS2
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 1);
-            this.monthCalendar1.Location = new System.Drawing.Point(616, 18);
+            this.monthCalendar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.monthCalendar1.Location = new System.Drawing.Point(812, 18);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 11;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            // 
+            // buildingBindingSource
+            // 
+            this.buildingBindingSource.DataSource = typeof(TTMS2.Building);
+            // 
+            // lecturerBindingSource
+            // 
+            this.lecturerBindingSource.DataSource = typeof(TTMS2.Lecturer);
             // 
             // Form8
             // 
@@ -230,6 +234,7 @@ namespace TTMS2
             ((System.ComponentModel.ISupportInitialize)(this.chartLecturer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartBuilding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.buildingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lecturerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +254,6 @@ namespace TTMS2
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.BindingSource lecturerBindingSource;
     }
 }
